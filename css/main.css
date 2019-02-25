@@ -1,0 +1,208 @@
+@font-face {
+    font-family: pacifico;
+    src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    height: 130px;
+    background-color: rgb(15, 66, 66);
+    color: rgb(190, 233, 229);
+    font-family: pacifico;
+}
+
+input {
+    width: 160px;
+    background-color: rgb(234, 247, 245);
+    color: rgb(15, 66, 66);
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    margin: 0 5px;
+}
+
+header h1 {
+    font-size: 3em
+}
+
+.book-filter {
+    align-self: flex-end;
+}
+
+.book-filter form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-filter span {
+    /* padding: 0 20px; */
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}
+
+.double-slider {
+    padding: 5px;
+    height: 25px;
+    width: 170px;
+    position: relative;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.double-slider .thumb {
+    height: 25px;
+    width: 15px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    background-image: linear-gradient(to bottom, rgb(228, 228, 228), rgb(190, 190, 190) );
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+}
+
+.double-slider .track {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    height: 4px;
+    width: 160px;
+    background-color: rgb(196, 196, 196);
+    cursor: pointer;
+}
+
+.double-slider .highlight {
+    background-color: rgb(9, 22, 37);;
+    position: absolute;
+}
+
+.btn {
+    background-color: rgb(190, 233, 229);
+    color: rgb(15, 66, 66);
+    font-size: 1.3em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.text-btn {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.book-details {
+    box-shadow: 0 0 2px rgba(57, 62, 70, 0.658);
+    position: fixed;
+    height: 100vh;
+    width: 350px;
+    top: 0;
+    right: -500px;
+    background-color: rgb(10, 29, 34);
+    color: #fff;
+    padding: 20px;
+    transition: .3s;
+}
+
+.book-details h2, .book-details h3 {
+    text-transform: capitalize;
+}
+
+.book-details ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-details li:last-child {
+    align-self: center;
+}
+
+.book-details.onscreen {
+    transform: translate(-500px);
+}
+
+.book-thumbnail-small {
+    max-width: 160px;
+    max-height: 200px;
+}
+
+.book-thumbnail-large {
+    width: 320px;
+    height: 400px;
+    object-fit: contain;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-list {
+    background-color: rgb(218, 248, 255)
+}
+
+.book-list > ul {
+    display: grid;
+    grid-template: repeat(auto-fill, 280px) / repeat(auto-fill, 180px); 
+    padding: 10px;
+}
+
+.book-preview {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.book-preview:hover {
+    box-shadow: 0 0 2px rgba(57, 62, 70, 0.658);
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.on-sale {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.6em;
+    background-color: rgb(251, 255, 0);
+    color: rgb(66, 15, 15);
+    height: 40px;
+    width: 300px;
+    padding: 7px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    transform: rotate(45deg) translate(90px, -50px);
+    text-transform: uppercase;
+}
